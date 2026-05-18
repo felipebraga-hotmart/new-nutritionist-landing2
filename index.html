@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marcela Reis — Nutricionista & Consultora de Bem-Estar</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,500,700,400,300,900&f[]=satoshi@900,700,500,400&display=swap" rel="stylesheet">
+<style>
+body {
+  font-family: 'Satoshi', sans-serif;
+  background-color: #F3F1EB;
+  color: #1A2E22;
+  overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6, .serif-font {
+  font-family: 'Cabinet Grotesk', sans-serif;
+}
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.word-wrapper {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  margin-right: 0.25em;
+  padding-bottom: 0.1em;
+}
+.word {
+  display: inline-block;
+  transform: translateY(110%);
+}
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float-delayed {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+.animate-float-delayed {
+  animation: float-delayed 8s ease-in-out infinite;
+  animation-delay: 2s;
+}
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 20px 40px -15px rgba(0,0,0,0.05);
+}
+</style>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Satoshi', 'sans-serif'],
+          serif: ['Cabinet Grotesk', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="antialiased selection:bg-[#1A2E22] selection:text-[#F3F1EB]">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 bg-[#F3F1EB]/80 backdrop-blur-md border-b border-[#1A2E22]/5 transition-all duration-300">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Left: Logo -->
+        <div class="flex items-center gap-2">
+          <iconify-icon icon="solar:leaf-linear" width="24" class="text-[#1A2E22]"></iconify-icon>
+          <span class="text-xl font-serif font-bold tracking-tight uppercase">Marcela Reis</span>
+        </div>
+        <!-- Right: CTA -->
+        <div class="flex items-center">
+          <a href="https://wa.me/5531988994673" target="_blank" class="bg-[#1A2E22] text-[#F3F1EB] px-5 py-2 rounded-full text-xs font-medium tracking-wide hover:bg-opacity-90 transition-all flex items-center gap-2 group active:scale-[0.98]">
+            Agendar Consulta
+            <iconify-icon icon="solar:arrow-right-linear" class="group-hover:translate-x-0.5 transition-transform"></iconify-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Premium Asymmetric Hero Section (Taste-Skill) -->
+  <main class="min-h-[100dvh] pt-24 pb-12 px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto flex items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center w-full">
+      
+      <!-- Left: Content (5 cols) -->
+      <div class="lg:col-span-6 xl:col-span-5 flex flex-col justify-center text-left">
+        <!-- Logo Strip / Badges -->
+        <div class="flex items-center gap-4 mb-8 opacity-0 fade-up-hero">
+          <div class="px-3 py-1 rounded-full border border-[#1A2E22]/10 bg-[#1A2E22]/5 text-[10px] font-bold tracking-widest uppercase flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            Vagas Abertas
+          </div>
+          <div class="flex -space-x-2">
+            <img src="https://i.pravatar.cc/100?img=1" class="w-6 h-6 rounded-full border border-[#F3F1EB]" alt="User">
+            <img src="https://i.pravatar.cc/100?img=5" class="w-6 h-6 rounded-full border border-[#F3F1EB]" alt="User">
+            <img src="https://i.pravatar.cc/100?img=8" class="w-6 h-6 rounded-full border border-[#F3F1EB]" alt="User">
+          </div>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="reveal-text serif-font text-4xl md:text-5xl lg:text-[3.5rem] leading-[0.95] tracking-tighter text-[#1A2E22] mb-6 font-bold">
+          Seguir um plano alimentar é disciplina. Conhecer o seu corpo e aprender a nutri-lo é liberdade.
+        </h1>
+        
+        <!-- Paragraph -->
+        <p class="text-lg md:text-xl text-[#1A2E22]/70 leading-relaxed max-w-[45ch] mb-10 opacity-0 fade-up-hero font-medium">
+          Esqueça dietas genéricas. Construa uma saúde metabólica de elite com estratégias nutricionais adaptadas ao seu estilo de vida e sustentáveis a longo prazo.
+        </p>
+        
+        <!-- CTA & Logos -->
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 opacity-0 fade-up-hero-cta">
+          <a href="https://wa.me/5531988994673" target="_blank" class="bg-[#1A2E22] text-[#F3F1EB] px-8 py-4 rounded-full text-sm font-medium hover:bg-[#1A2E22]/90 active:scale-[0.98] transition-all flex items-center gap-3 shadow-[0_10px_20px_-10px_rgba(26,46,34,0.3)] group cursor-pointer">
+            Agendar Estratégia
+            <iconify-icon icon="solar:arrow-right-linear" class="group-hover:translate-x-1.5 transition-transform"></iconify-icon>
+          </a>
+          
+          <div class="flex items-center gap-5 sm:border-l border-[#1A2E22]/10 sm:pl-6 h-12">
+            <iconify-icon icon="simple-icons:forbes" width="24" class="opacity-20 mix-blend-multiply"></iconify-icon>
+            <iconify-icon icon="simple-icons:vogue" width="24" class="opacity-20 mix-blend-multiply"></iconify-icon>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Asset (Parallax/Float) (7 cols) -->
+      <div class="lg:col-span-6 xl:col-span-7 relative w-full h-[500px] lg:h-[70vh] opacity-0 fade-up-hero-asset">
+        <!-- Main Image Container -->
+        <div class="absolute inset-0 rounded-[2.5rem] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1600&auto=format&fit=crop" class="w-full h-full object-cover scale-105" alt="Nutrition Concept">
+          <div class="absolute inset-0 bg-[#1A2E22]/10 mix-blend-overlay"></div>
+          <!-- Liquid Glass Inner Border hack via shadow -->
+          <div class="absolute inset-0 rounded-[2.5rem] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.2)] pointer-events-none"></div>
+        </div>
+
+        <!-- Floating Metric Card (Perpetual Animation) -->
+        <div class="absolute -bottom-6 -left-6 lg:bottom-12 lg:-left-12 max-w-[260px] liquid-glass rounded-3xl p-5 animate-float shadow-2xl z-10 hidden sm:block">
+          <div class="flex justify-between items-center mb-3">
+            <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
+              <iconify-icon icon="solar:graph-up-bold-duotone" class="text-emerald-500 text-xl"></iconify-icon>
+            </div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-[#1A2E22]/80 bg-white/50 px-2 py-1 rounded-md">Metabolismo</span>
+          </div>
+          <h3 class="serif-font text-3xl text-white mb-1 leading-none drop-shadow-sm">+42%</h3>
+          <p class="text-[11px] text-white/90 font-medium leading-tight">Flexibilidade metabólica restaurada clinicamente.</p>
+        </div>
+
+        <!-- Secondary Floating Element -->
+        <div class="absolute top-12 -right-4 lg:top-24 lg:-right-6 liquid-glass rounded-2xl p-3 flex items-center gap-3 animate-float-delayed shadow-xl z-10 hidden sm:flex border border-white/30 backdrop-blur-3xl">
+          <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 relative">
+            <div class="absolute inset-0 rounded-full bg-emerald-400 animate-ping opacity-75"></div>
+          </div>
+          <p class="text-xs font-bold text-white tracking-wide">Protocolo Ativo</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Quote Section -->
+  <section class="py-24 px-4 bg-white border-y border-[#1A2E22]/5">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="reveal-text serif-font text-3xl md:text-5xl leading-tight font-bold text-[#1A2E22] tracking-tight">
+        "Nutrição não é dieta - é uma conversa entre sua alimentação, seu organismo e sua genética. Eu te ajudo a construir essa história de uma maneira leve, eficaz e baseada em evidências científicas."
+      </h2>
+      <div class="mt-8 flex items-center justify-center gap-3">
+        <img src="https://static-public.pages.hotmart.com/uploads/media/file/7271449/marcela_reis_bg-removebg-preview.png" class="w-10 h-10 rounded-full object-cover" alt="Marcela Reis">
+        <div class="text-left">
+          <div class="text-sm font-bold">Marcela Reis</div>
+          <div class="text-xs text-[#1A2E22]/50 font-medium">CRN-MG, Nutricionista Clínica</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Approach / Pillars Slider -->
+  <section id="approach" class="py-24 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-end justify-between mb-10">
+      <div>
+        <h3 class="serif-font text-3xl md:text-4xl mb-2 font-bold reveal-text">O que eu acredito</h3>
+        <p class="text-sm text-[#1A2E22]/60 font-medium">Princípios que guiam cada protocolo.</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pb-10">
+      <!-- Belief 1 -->
+      <div class="group cursor-pointer">
+        <div class="w-full aspect-square bg-white rounded-[2rem] mb-5 flex items-center justify-center p-8 group-hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] transition-all border border-[#1A2E22]/5 relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?q=80&w=400&auto=format&fit=crop" class="w-full object-cover h-full group-hover:scale-105 transition-transform duration-700 rounded-2xl opacity-80" alt="Constância">
+        </div>
+        <h4 class="font-bold text-lg">Constância</h4>
+        <p class="text-sm text-[#1A2E22]/60 font-medium">Constância te leva muito mais longe do que a velocidade. A velocidade vai te exigir estratégias insustentáveis no longo prazo.</p>
+      </div>
+
+      <!-- Belief 2 -->
+      <div class="group cursor-pointer">
+        <div class="w-full aspect-square bg-white rounded-[2rem] mb-5 flex items-center justify-center p-8 group-hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] transition-all border border-[#1A2E22]/5 relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=400&auto=format&fit=crop" class="w-full object-cover h-full group-hover:scale-105 transition-transform duration-700 rounded-2xl opacity-80" alt="Flexibilidade">
+        </div>
+        <h4 class="font-bold text-lg">Flexibilidade</h4>
+        <p class="text-sm text-[#1A2E22]/60 font-medium">Não é sobre não sair da dieta, mas sobre voltar para ela o mais rápido possível. É o plano alimentar que precisa ser adequado a sua rotina e não ao contrário.</p>
+      </div>
+
+      <!-- Belief 3 -->
+      <div class="group cursor-pointer">
+        <div class="w-full aspect-square bg-white rounded-[2rem] mb-5 flex items-center justify-center p-8 group-hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] transition-all border border-[#1A2E22]/5 relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=400&auto=format&fit=crop" class="w-full object-cover h-full group-hover:scale-105 transition-transform duration-700 rounded-2xl opacity-80" alt="Massa Magra">
+        </div>
+        <h4 class="font-bold text-lg">Massa Magra</h4>
+        <p class="text-sm text-[#1A2E22]/60 font-medium">Massa magra é ouro. Perder peso perdendo músculo é sentença de redução da taxa de metabolismo, reganho de peso e perda de autonomia no envelhecimento.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consultation Approach Section -->
+  <section class="relative w-full overflow-hidden py-24 md:py-32 bg-[#1A2E22]">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Header -->
+      <div class="max-w-3xl mb-16">
+        <h2 class="reveal-text text-white serif-font text-4xl md:text-5xl lg:text-6xl mb-6 font-bold tracking-tight leading-tight">
+          Na consulta você encontrará uma abordagem integral para uma mudança duradoura.
+        </h2>
+        <p class="text-white/60 text-lg md:text-xl font-medium leading-relaxed">
+          Cardápio saudável e ajustado a sua rotina que leve em consideração:
+        </p>
+      </div>
+
+      <!-- Grid of items -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Item 1 -->
+        <div class="liquid-glass rounded-2xl p-6 group hover:bg-white/10 transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-emerald-400/10 flex items-center justify-center mb-5">
+            <iconify-icon icon="solar:heart-pulse-bold-duotone" class="text-emerald-400 text-2xl"></iconify-icon>
+          </div>
+          <h4 class="text-white font-bold text-lg mb-2">Sua Saúde</h4>
+          <p class="text-white/50 text-sm font-medium">Cuidado clínico com foco na prevenção e no equilíbrio do seu organismo.</p>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="liquid-glass rounded-2xl p-6 group hover:bg-white/10 transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-emerald-400/10 flex items-center justify-center mb-5">
+            <iconify-icon icon="solar:star-bold-duotone" class="text-emerald-400 text-2xl"></iconify-icon>
+          </div>
+          <h4 class="text-white font-bold text-lg mb-2">Sua Estética</h4>
+          <p class="text-white/50 text-sm font-medium">Composição corporal alinhada aos seus objetivos pessoais.</p>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="liquid-glass rounded-2xl p-6 group hover:bg-white/10 transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-emerald-400/10 flex items-center justify-center mb-5">
+            <iconify-icon icon="solar:shield-bold-duotone" class="text-emerald-400 text-2xl"></iconify-icon>
+          </div>
+          <h4 class="text-white font-bold text-lg mb-2">Sua Saúde Intestinal</h4>
+          <p class="text-white/50 text-sm font-medium">Microbiota equilibrada como base para imunidade e bem-estar.</p>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="liquid-glass rounded-2xl p-6 group hover:bg-white/10 transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-emerald-400/10 flex items-center justify-center mb-5">
+            <iconify-icon icon="solar:moon-sleep-bold-duotone" class="text-emerald-400 text-2xl"></iconify-icon>
+          </div>
+          <h4 class="text-white font-bold text-lg mb-2">Sua Qualidade de Sono</h4>
+          <p class="text-white/50 text-sm font-medium">Nutrientes e hábitos que favorecem um descanso reparador.</p>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="liquid-glass rounded-2xl p-6 group hover:bg-white/10 transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-emerald-400/10 flex items-center justify-center mb-5">
+            <iconify-icon icon="solar:bolt-bold-duotone" class="text-emerald-400 text-2xl"></iconify-icon>
+          </div>
+          <h4 class="text-white font-bold text-lg mb-2">Sua Energia e Disposição</h4>
+          <p class="text-white/50 text-sm font-medium">Estratégias para manter vitalidade constante ao longo do dia.</p>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="liquid-glass rounded-2xl p-6 group hover:bg-white/10 transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-emerald-400/10 flex items-center justify-center mb-5">
+            <iconify-icon icon="solar:running-round-bold-duotone" class="text-emerald-400 text-2xl"></iconify-icon>
+          </div>
+          <h4 class="text-white font-bold text-lg mb-2">Atividade Física</h4>
+          <p class="text-white/50 text-sm font-medium">Orientações nutricionais para potencializar seu treino e recuperação.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="text-[#F3F1EB] bg-[#1A2E22] py-24 md:py-32">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+      <div class="mb-12 lg:mb-0">
+        <span class="text-emerald-400 text-xs font-bold tracking-widest uppercase mb-4 block">Não há fórmula mágica</span>
+        <h2 class="reveal-text serif-font text-5xl md:text-6xl mb-8 font-bold text-white tracking-tight">O seu corpo tem respostas. <br>A consulta revela o caminho.</h2>
+        <p class="text-white/60 text-lg md:text-xl mb-10 max-w-xl font-medium leading-relaxed">Cada pessoa é única. Por isso, as condutas nutricionais são individualizadas e construídas após uma escuta cuidadosa sobre quem é você.</p>
+      </div>
+
+      <div class="relative w-full max-w-lg mx-auto lg:mr-0">
+        <!-- Decoration -->
+        <div class="absolute -top-12 -right-12 text-[15rem] font-serif text-white-[0.02] select-none pointer-events-none mix-blend-overlay opacity-5 hidden md:block">01</div>
+        
+        <!-- Premium CTA Card -->
+        <div class="bg-white text-[#1A2E22] rounded-[2.5rem] p-10 shadow-[0_40px_80px_-20px_rgba(0,0,0,0.5)] relative z-10 transform sm:hover:-translate-y-2 transition-transform duration-500">
+          <div class="flex justify-between items-start mb-8">
+            <div class="w-12 h-12 rounded-2xl bg-[#1A2E22] text-white flex items-center justify-center shadow-lg">
+              <iconify-icon icon="solar:heart-pulse-bold-duotone" class="text-2xl text-emerald-400"></iconify-icon>
+            </div>
+            <div class="px-3 py-1 bg-[#F3F1EB] rounded-full text-[10px] font-bold uppercase tracking-widest text-[#1A2E22]/60">Vagas Limitadas</div>
+          </div>
+          <h3 class="serif-font text-3xl mb-4 leading-tight font-bold">Sua transformação começa com uma decisão.</h3>
+          <p class="text-sm text-[#1A2E22]/60 mb-8 font-medium">Agende sua consulta e cuide da sua saúde!</p>
+          
+          <ul class="space-y-4 mb-10">
+            <li class="flex items-start gap-3 text-sm font-medium">
+              <iconify-icon icon="solar:check-read-bold" class="mt-0.5 text-[#1A2E22] text-lg"></iconify-icon>
+              <span>Avaliação clínica e metabólica completa</span>
+            </li>
+            <li class="flex items-start gap-3 text-sm font-medium">
+              <iconify-icon icon="solar:check-read-bold" class="mt-0.5 text-[#1A2E22] text-lg"></iconify-icon>
+              <span>Cardápios adaptados a sua rotina</span>
+            </li>
+            <li class="flex items-start gap-3 text-sm font-medium">
+              <iconify-icon icon="solar:check-read-bold" class="mt-0.5 text-[#1A2E22] text-lg"></iconify-icon>
+              <span>Avaliação física por Bioimpedância (consultas presenciais)</span>
+            </li>
+          </ul>
+          <a href="https://wa.me/5531988994673" target="_blank" class="w-full bg-[#1A2E22] text-white py-4 rounded-full text-sm font-bold tracking-wide hover:opacity-90 active:scale-[0.98] transition-all flex justify-center items-center gap-2 group">
+            Agendar Minha Vaga
+            <iconify-icon icon="solar:arrow-right-linear" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="overflow-hidden bg-[#F3F1EB] text-[#1A2E22] pt-24 md:pt-32 pb-0 relative">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid md:grid-cols-12 gap-12 lg:gap-24 mb-24">
+        <div class="md:col-span-5 lg:col-span-4">
+          <p class="text-[10px] font-bold uppercase tracking-widest mb-6 text-[#1A2E22]/40">Bem-Estar</p>
+          <p class="text-3xl font-serif mb-8 leading-tight tracking-tight font-bold">Nutrição de precisão para uma saúde duradoura.</p>
+          <a href="https://wa.me/5531988994673" target="_blank" class="text-xs font-bold bg-[#1A2E22] text-white px-6 py-3 rounded-full hover:opacity-90 transition-opacity inline-block active:scale-[0.98]">Agendar Consulta</a>
+        </div>
+        <div class="md:col-span-3 lg:col-span-3">
+           <!-- Space -->
+        </div>
+        <div class="md:col-span-4 lg:col-span-5 flex flex-col sm:flex-row justify-start md:justify-end gap-12 lg:gap-24 text-sm font-medium">
+          <div class="flex flex-col gap-4">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-[#1A2E22]/40 mb-2">Contato</span>
+            <a href="mailto:marcelareis.nutricao@gmail.com" class="hover:text-[#1A2E22]/70 transition-colors">marcelareis.nutricao@gmail.com</a>
+            <span class="text-[#1A2E22]/60">+55 (31) 99315-2809</span>
+            <span class="text-[#1A2E22]/60 text-xs mt-2">Av. Álvares Cabral, 1777 - 4º andar - Santo Agostinho, Belo Horizonte - MG, 30170-008</span>
+          </div>
+          <div class="flex flex-col gap-4">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-[#1A2E22]/40 mb-2">Social</span>
+            <a href="https://www.instagram.com/nutricionistamarcelareis/" class="hover:text-[#1A2E22]/70 transition-colors">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Big Text Matrix -->
+    <div class="w-full text-center leading-none overflow-hidden border-t border-[#1A2E22]/10 mix-blend-multiply opacity-20">
+      <h1 class="text-[26vw] leading-[0.75] font-serif font-black text-[#1A2E22] tracking-tighter select-none pointer-events-none -mb-[0.05em] pt-4">
+        MARCELA
+      </h1>
+    </div>
+  </footer>
+
+  <!-- GSAP Animations -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Text Splitter
+      document.querySelectorAll(".reveal-text").forEach(element => {
+        const words = element.innerText.split(" ");
+        element.innerHTML = words.map(w => `<span class="word-wrapper"><span class="word">${w}</span></span>`).join(" ");
+      });
+
+      // Reveal Animation
+      document.querySelectorAll(".reveal-text").forEach(element => {
+        gsap.to(element.querySelectorAll(".word"), {
+          scrollTrigger: { trigger: element, start: "top 90%", toggleActions: "play none none none" },
+          y: 0, duration: 1.2, ease: "power4.out", stagger: 0.04
+        });
+      });
+
+      // Hero Inits
+      gsap.to(".fade-up-hero", { opacity: 1, y: 0, duration: 1.2, ease: "power3.out", stagger: 0.1, delay: 0.1, startAt: {y: 30} });
+      gsap.to(".fade-up-hero-cta", { opacity: 1, y: 0, duration: 1.2, ease: "power3.out", delay: 0.4, startAt: {y: 30} });
+      gsap.to(".fade-up-hero-asset", { opacity: 1, duration: 1.5, ease: "power4.out", delay: 0.3, startAt: {scale: 0.96, transformOrigin: 'center'} });
+
+      // Parallax Images
+      document.querySelectorAll(".parallax-wrapper").forEach(wrapper => {
+        const img = wrapper.querySelector(".parallax-img");
+        if (img) {
+          gsap.fromTo(img, { y: "-10%" }, {
+            y: "10%", ease: "none",
+            scrollTrigger: { trigger: wrapper, start: "top bottom", end: "bottom top", scrub: true }
+          });
+        }
+      });
+
+      // General Fade Up Elements
+      gsap.utils.toArray(".fade-up-element").forEach(el => {
+        gsap.to(el, {
+          opacity: 1, y: 0, duration: 1, ease: "power3.out",
+          scrollTrigger: { trigger: el, start: "top 85%" }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
